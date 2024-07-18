@@ -238,7 +238,7 @@
         message: msg
       };
 
-      emailjs.send('service_zd0uog2', 'template_oe4nsva', templateParams)
+      emailjs.send('service_7g87m7n', 'template_a25jy2f', templateParams)
         .then(function (response) {
           console.log('SUCCESS!', response.status, response.text);
         }, function (error) {
@@ -250,7 +250,7 @@
     const boxes = document.querySelectorAll('.box');
 
     // Check if a box is already opened in the current session
-    const isOpenedInSession = sessionStorage.getItem('isOpened');
+    const isOpenedInSession = localStorage.getItem('isOpened');
 
     // Add click event listener to each box
     boxes.forEach(box => {
@@ -265,7 +265,7 @@
 
           box.classList.add('is-open');
 
-          sessionStorage.setItem('isOpened', true);
+          localStorage.setItem('isOpened', true);
 
           const modal = document.getElementById('modal');
           const modalTitle = document.getElementById('modal-title');
